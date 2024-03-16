@@ -1,0 +1,74 @@
+
+/* Home Page styling */
+
+.home_content_wrapper{
+    margin-top:150px;
+}
+
+/* Static Navbar styling */
+
+.nav_logo{
+    width: 40px;
+    margin-top: -6px;
+    background-color: white;
+  }
+  
+.logo_text{
+  margin-left:15px;
+  font-style: italic;
+  color: #f8a013;
+}
+
+
+
+.bg-blue{
+ background-color:#07407b;
+}
+
+.navigation_links{
+  font-size: 25px;
+  color:white;
+  margin-left: 15px;
+  transition: all .3s ease-in-out;
+}
+
+    
+.navigation_links:hover{
+    background-color:#db8f14;
+    color:black;
+    transition: all 0.5s;  
+}
+
+i{
+    color:white;
+}
+
+i:hover{
+    color:#db8f14;
+}
+  
+
+/* Footer Styling*/
+
+#footer{
+    color:white;
+    font-size: 25px;
+  }
+  
+  #footer a{
+    color:#f2a831;
+    text-decoration: underline;
+    font-style: italic;
+  }
+  
+  @media (max-width:996px)  {
+  #footer{
+    font-size:23px;
+  }
+  }
+  
+  @media (max-width:764px)  {
+  #footer{
+    font-size:20px;
+  }
+  }
