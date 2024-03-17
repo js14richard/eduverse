@@ -6,6 +6,7 @@
 
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -25,12 +26,26 @@ code {
 
 /*Reducing boostrap navbar padding in Y axis */
 .navbar {
-  --bs-navbar-padding-y: .3rem;
+  --bs-navbar-padding-y: 0;
 }
 
+@media (max-width: 576px) {
+  .navbar {
+    --bs-navbar-padding-y: .3rem;
+  }  
+}
 /* Changind the navbar toggle color */
 .navbar-toggler-icon{
   color: orange;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(168, 167, 167, 0.483);
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(232, 150, 7, 0.88);
 }
 
 /*Overriding bootstrap form control styling*/

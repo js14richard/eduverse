@@ -10,6 +10,7 @@ import UserLogin from './components/static_components/UserLogin'
 import NotFound from './components/static_components/NotFound'
 
 import { Route, Routes } from 'react-router-dom';
+import ComingSoon from './components/static_components/ComingSoon';
 
 function App() {
   return (
@@ -17,14 +18,13 @@ function App() {
 
       <StaticNavbar/>
 
-
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about_us" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="user_registration" element={<UserRegistration />} />
         <Route path="user_login" element={<UserLogin />} />
+        <Route path="coming_soon" element={<ComingSoon />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

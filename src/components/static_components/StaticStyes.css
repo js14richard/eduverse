@@ -1,11 +1,17 @@
 
+
 /* Home Page styling */
 
-.home_content_wrapper{
-    margin-top:150px;
+/* Static Navbar styling */
+
+.active{
+  background-color:#db8f14;
+  color:black !important;
 }
 
-/* Static Navbar styling */
+.navbar-brand{
+  background-color:transparent !important;
+}
 
 .nav_logo{
     width: 40px;
@@ -16,9 +22,8 @@
 .logo_text{
   margin-left:15px;
   font-style: italic;
-  color: #f8a013;
+  color:white;
 }
-
 
 
 .bg-blue{
@@ -29,6 +34,7 @@
   font-size: 25px;
   color:white;
   margin-left: 15px;
+  padding:10px;
   transition: all .3s ease-in-out;
 }
 
@@ -46,29 +52,245 @@ i{
 i:hover{
     color:#db8f14;
 }
-  
+
+
+
+/* home_carousel_section */
+
+.home_carousel_img{
+  height: 70vh;
+  object-fit: cover;
+}
+
+/* Flip images left-right */ 
+@media (max-width: 780px) {
+  .home_carousel_img {
+    height: 40vh;
+  }
+}
+
+/**** Customer Logo Section ****/
+
+.customer-logo{
+  padding:50px 5px;
+}
+
+.customer-logo table tr td {
+  width: 20%;
+  height:max-content;
+  vertical-align: center;
+  text-align: center;
+  padding:5px;
+}
+
+.customer-logo table tr td img{
+  padding:10px;
+  width:auto;
+  height:60px;
+  vertical-align: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.customer-logo table tr td img:hover {
+  filter:grayscale(100);
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  .customer-logo table tr td img{
+    height: 45px;
+  }
+}
+
+.card_section{
+  cursor: pointer;
+}
+
+.card{
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+
+.card:hover > img {
+  transform: scale(1.1);
+  transition: transalform 0.3s ease;
+}
+
+/** About Page Styling **/
+
+.about-intro{
+  margin-top: 100px;
+}
+
+.about-intro h4{
+  font-weight: bold;
+}
+
+@media (max-width:996px) {
+  h4{
+      text-align:center;
+  }
+}
+
+
+.about-intro p{
+  text-align: justify;
+  margin-top:15px;
+}
+
+.about-intro img{
+  border-radius: 8px;
+}
+
+@media (max-width: 576px){
+  .about_intro_img {
+    margin-top: 1rem!important;
+}
+}
+
+
+.btn-info{
+  background-color: orange;
+  border:2px solid orange;
+  color:white;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-info:hover{
+  border:2px solid #07407b;  
+  background-color: orange;
+  color:white;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.how-it-works{
+  margin-top:55px;
+}
+
+.how-it-works h2{
+  font-weight: bold;
+  text-align:center;
+}
+
+.steps{
+  height: max-content;
+  margin-top:25px;
+  padding:20px;
+}
+
+.steps h4{
+  font-weight: 550;
+
+}
+
+.steps i{
+  color:orange;
+  font-size: 40px;
+}
+
+
+/* Contact Page Styling */
+
+.contact_heading{
+  margin-top:110px;
+}
+
+.contact-form-sec{
+  margin:5px;
+  padding:15px;
+}
+
+.contact-content h6{
+  font-weight: bold;
+}
+
+.contact-content input,textarea{
+  margin-top:35px;
+}
+
+.form-control{
+  border-radius: 30px;  
+}
+
+@media (max-width: 1000px){
+  .contact_heading {
+    margin-top: 90px;
+}
+}
+
+.contact-map{
+  height: 400px;
+  max-height: 400px;
+  min-height: 90px;
+  width: 100%;
+}
+
+.contact-map iframe{
+  width: inherit;
+  height: inherit;
+}
+
+
+/* Contact Page Styling */
+
+.register_image{
+  height: 400px;
+}
+
+/* Login page Styling */
+
+.login_button{
+  font-size:20px;
+}
+
+.login_page_link{
+  display: inline-block;
+  color:#07407b;
+}
+
 
 /* Footer Styling*/
 
 #footer{
-    color:white;
-    font-size: 25px;
-  }
+  color:white;
+  font-size: 23px;
+}
+
+#footer a{
+  color:#f2a831;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+@media (max-width:996px)  {
+#footer{
+  font-size:20px;
+}
+}
+
+@media (max-width:764px)  {
+#footer{
+  font-size:18px;
+}
+}
+
+
+/* Coming Soon Page */
+.coming_soon img{
+  height: 100vh;
+  width: 100%;
+  object-fit:fill;
+}
+
+/* Not Found Page */
+
+.not_found img{
+  height: 100vh;
+  width: 100%;
+  object-fit:contain;
+}
   
-  #footer a{
-    color:#f2a831;
-    text-decoration: underline;
-    font-style: italic;
-  }
-  
-  @media (max-width:996px)  {
-  #footer{
-    font-size:23px;
-  }
-  }
-  
-  @media (max-width:764px)  {
-  #footer{
-    font-size:20px;
-  }
-  }

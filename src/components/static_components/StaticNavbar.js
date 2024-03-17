@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
   return (
@@ -7,10 +7,10 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-sm bg-blue navbar-dark">
         <div className="container">
           <div className='d-flex justify-content-between align-items-center w-100'>
-            <Link className="navbar-brand" to="/">
+            <NavLink className="navbar-brand" to="/" activeClassName='active'>
               <img src="/logo.png" className="rounded-pill nav_logo" alt='' />
               <h3 className='d-inline-block logo_text mt-1'>EduVerse</h3>
-            </Link>
+            </NavLink>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_navbar" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -18,19 +18,19 @@ export default function Navbar() {
           <div className="collapse navbar-collapse text-center" id="main_navbar">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className='nav-link navigation_links' to="">Home</Link>
+                <NavLink className='nav-link navigation_links' to="" activeClassName='active'>Home</NavLink>
               </li>
               <li className="nav-item">
-                <Link className='nav-link navigation_links' to="about_us">About</Link>
+                <NavLink className='nav-link navigation_links' to="about_us" activeClassName='active'>About</NavLink>
               </li>
               <li className="nav-item">
-                <Link className='nav-link navigation_links' to="contact">Contact</Link>
+                <NavLink className='nav-link navigation_links' to="contact" activeClassName='active'>Contact</NavLink>
               </li>
               <li className="nav-item">
-                <Link className='nav-link navigation_links' to="user_register">Register</Link>
+                <NavLink className='nav-link navigation_links' to="user_registration" activeClassName='active'>Register</NavLink>
               </li>
               <li className="nav-item">
-                <Link className='nav-link navigation_links' to="user_login">Login</Link>
+                <NavLink className='nav-link navigation_links' to="user_login" activeClassName='active'>Login</NavLink>
               </li>
             </ul>
           </div>
