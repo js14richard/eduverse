@@ -1,6 +1,4 @@
 import React from 'react'
-import Footer from './Footer'
-import Address from './Address'
 import { Link } from 'react-router-dom'
 
 export default function Contact() {
@@ -41,9 +39,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <Address/>
-      <Footer/>
-        
     </div>
   )
 }

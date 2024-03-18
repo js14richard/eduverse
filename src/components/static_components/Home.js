@@ -56,7 +56,7 @@ export default function Home() {
         <div className='container card_section mt-lg-3 mt-md-3'>
             <div className='row d-flex justify-content-around'>
                 <div className="col-md-3 mt-3">
-                  <div className="card">
+                  <div className="card card_scale">
                     <img src='/home_card_1.jpg' className="card-img-top" alt="Card Image" />
                     <div className="card-body">
                       <h5 className="card-title">Programming Languages</h5>

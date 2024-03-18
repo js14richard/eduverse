@@ -1,6 +1,7 @@
 import React from 'react'
 import Address from './Address'
 import Footer from './Footer'
+import Contact from './Contact'
 
 export default function About() {
   return (
@@ -73,6 +74,9 @@ export default function About() {
         </div>
 
       </div>
+    
+    <Contact/>
+
     <Address/>
     <Footer/>
     </div>

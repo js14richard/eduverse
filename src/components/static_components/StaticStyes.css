@@ -109,14 +109,18 @@ i:hover{
 }
 
 .card{
+  cursor: pointer;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
+.card img{
+  transition: all .5s ease-in-out;
+}
 
-.card:hover > img {
+.card_scale:hover > img {
   transform: scale(1.1);
-  transition: transalform 0.3s ease;
+  transition: all .5s ease-in-out;
 }
 
 /** About Page Styling **/
@@ -312,4 +316,43 @@ i:hover{
   width: 100%;
   object-fit:contain;
 }
-  
+
+
+/* Course Listing Page */
+
+
+.course_listing_page_wrapper{
+  margin-top: 100px;
+}
+
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+
+.card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.course_card_image {
+  object-fit: cover;
+  height: 150px;
+}
+
+.course_display{
+  margin-top: 100px;
+}
+
+.course_detail_image{
+  height: 350px;
+  object-fit: contain;
+}

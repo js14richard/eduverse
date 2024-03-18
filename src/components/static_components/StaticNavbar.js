@@ -24,7 +24,7 @@ export default function Navbar() {
                 <NavLink className='nav-link navigation_links' to="about_us" activeclassname='active'>About</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className='nav-link navigation_links' to="contact" activeclassname='active'>Contact</NavLink>
+                <NavLink className='nav-link navigation_links' to="courses_listing" activeclassname='active'>Courses</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className='nav-link navigation_links' to="user_registration" activeclassname='active'>Register</NavLink>

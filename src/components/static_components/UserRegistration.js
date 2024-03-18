@@ -35,6 +35,7 @@ export default function UserRegistration() {
     <div>
       <div className="container pt-5 mt-5">
         <h2 className="mb-4 text-center">User Registration</h2>
+        
         {/* Bootstrap danger alert */}
         {registrationError && (
                 <div className="alert alert-danger mt-3" role="alert">

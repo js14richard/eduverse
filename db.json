@@ -30,108 +30,186 @@
       "email": "admin@example.com",
       "phone": "789-012-3456",
       "isAdmin": true
+    },
+    {
+      "id": "8bc6",
+      "name": "SlackBot Test",
+      "email": "asdfasdf@asdf.ds",
+      "password": "RichiTech@123442",
+      "phone_number": "79797998777",
+      "additional_field": []
     }
   ],
   "courses": [
     {
       "id": "1",
-      "title": "Introduction to Software Development",
-      "description": "Learn the basics of software development.",
-      "category": "Software Development",
+      "title": "MERN Stack Development",
+      "description": "Learn the MERN (MongoDB, Express.js, React.js, Node.js) stack for full-stack web development.",
+      "category": "Full Stack Development",
       "price": 29.99,
       "isUpcoming": false,
-      "soldCount": 15
+      "soldCount": 15,
+      "rating": {
+        "rate": 4.3,
+        "count": 100
+      },
+      "image_url": "/mern1.png"
     },
     {
       "id": "2",
+      "title": "MEAN Stack Development",
+      "description": "Master the MEAN (MongoDB, Express.js, Angular, Node.js) stack for full-stack web development.",
+      "category": "Full Stack Development",
+      "price": 24.99,
+      "isUpcoming": false,
+      "soldCount": 22,
+      "rating": {
+        "rate": 1.3,
+        "count": 80
+      },
+      "image_url": "/mean.png"
+    },
+    {
+      "id": "3",
+      "title": "Java Full Stack Development",
+      "description": "Become proficient in Java-based full-stack development with frameworks like Spring Boot and Angular.",
+      "category": "Full Stack Development",
+      "price": 34.99,
+      "isUpcoming": false,
+      "soldCount": 18,
+      "rating": {
+        "rate": 3,
+        "count": 120
+      },
+      "image_url": "/java.png"
+    },
+    {
+      "id": "4",
+      "title": "Python Full Stack Development",
+      "description": "Explore full-stack web development using Python with frameworks like Django and React.",
+      "category": "Full Stack Development",
+      "price": 39.99,
+      "isUpcoming": true,
+      "soldCount": 5,
+      "rating": {
+        "rate": 4.0,
+        "count": 50
+      },
+      "image_url": "/python.png"
+    },
+    {
+      "id": "5",
+      "title": ".NET Full Stack Development",
+      "description": "Build modern web applications with the .NET full-stack framework, including ASP.NET Core and Angular.",
+      "category": "Full Stack Development",
+      "price": 29.99,
+      "isUpcoming": false,
+      "soldCount": 12,
+      "rating": {
+        "rate": 2,
+        "count": 90
+      },
+      "image_url": "/dot_net.png"
+    },
+    {
+      "id": "6",
+      "title": "PHP Full Stack Development",
+      "description": "Learn PHP-based full-stack web development with popular frameworks like Laravel and Vue.js.",
+      "category": "Full Stack Development",
+      "price": 24.99,
+      "isUpcoming": false,
+      "soldCount": 15,
+      "rating": {
+        "rate": 3.6,
+        "count": 70
+      },
+      "image_url": "/php.png"
+    },
+    {
+      "id": "7",
+      "title": "Graphic Design Fundamentals",
+      "description": "Master the fundamental principles of graphic design.",
+      "category": "Graphic Designing",
+      "price": 19.99,
+      "isUpcoming": false,
+      "soldCount": 10,
+      "rating": {
+        "rate": 4.5,
+        "count": 50
+      },
+      "image_url": "/graphic_design_1.png"
+    },
+    {
+      "id": "8",
+      "title": "Advanced Graphic Design Techniques",
+      "description": "Explore advanced techniques and concepts in graphic design.",
+      "category": "Graphic Designing",
+      "price": 29.99,
+      "isUpcoming": false,
+      "soldCount": 8,
+      "rating": {
+        "rate": 4.2,
+        "count": 40
+      },
+      "image_url": "/graphic_design_2.png"
+    },
+    {
+      "id": "9",
+      "title": "Digital Illustration for Graphic Designers",
+      "description": "Learn digital illustration techniques for graphic design projects.",
+      "category": "Graphic Designing",
+      "price": 24.99,
+      "isUpcoming": true,
+      "soldCount": 3,
+      "rating": {
+        "rate": 4.8,
+        "count": 20
+      },
+      "image_url": "/coming_soon.png"
+    },
+    {
+      "id": "10",
+      "title": "Typography Essentials",
+      "description": "Master the essentials of typography in graphic design.",
+      "category": "Graphic Designing",
+      "price": 34.99,
+      "isUpcoming": true,
+      "soldCount": 2,
+      "rating": {
+        "rate": 4.0,
+        "count": 15
+      },
+      "image_url": "/coming_soon.png"
+    },
+    {
+      "id": "11",
       "title": "Digital Marketing Fundamentals",
       "description": "Master the essentials of digital marketing strategies.",
       "category": "Digital Marketing",
       "price": 24.99,
       "isUpcoming": false,
-      "soldCount": 22
+      "soldCount": 22,
+      "rating": {
+        "rate": 4.2,
+        "count": 80
+      },
+      "image_url": "/digital_marketing.png"
     },
     {
-      "id": "3",
-      "title": "Graphic Design Essentials",
-      "description": "Explore the fundamental principles of graphic design.",
-      "category": "Graphic Designing",
-      "price": 34.99,
-      "isUpcoming": false,
-      "soldCount": 18
-    },
-    {
-      "id": "4",
-      "title": "Effective Communication Skills",
-      "description": "Enhance your soft skills for professional success.",
-      "category": "Soft Skills",
-      "price": 19.99,
-      "isUpcoming": false,
-      "soldCount": 25
-    },
-    {
-      "id": "5",
-      "title": "Advanced Web Development",
-      "description": "Take your web development skills to the next level.",
-      "category": "Software Development",
-      "price": 39.99,
-      "isUpcoming": true,
-      "soldCount": 5
-    },
-    {
-      "id": "6",
+      "id": "12",
       "title": "Social Media Marketing Strategies",
       "description": "Learn effective strategies for social media marketing.",
       "category": "Digital Marketing",
       "price": 29.99,
-      "isUpcoming": false,
-      "soldCount": 12
-    }
-  ],
-  "feedbacks": [
-    {
-      "id": "1",
-      "username": "user123",
-      "rating": 4,
-      "comment": "Great course, highly recommended!"
-    },
-    {
-      "id": "2",
-      "username": "user456",
-      "rating": 5,
-      "comment": "Excellent content and instructors."
-    },
-    {
-      "id": "3",
-      "username": "user789",
-      "rating": 3,
-      "comment": "Good course, but could use more practice exercises."
-    }
-  ],
-  "employees": [
-    {
-      "id": "1",
-      "name": "John Doe",
-      "position": "Software Engineer",
-      "department": "Engineering",
-      "email": "john.doe@example.com",
-      "phone": "111-222-3333"
-    },
-    {
-      "id": "2",
-      "name": "Jane Smith",
-      "position": "Marketing Manager",
-      "department": "Marketing",
-      "email": "jane.smith@example.com",
-      "phone": "222-333-4444"
-    },
-    {
-      "id": "3",
-      "name": "Michael Johnson",
-      "position": "Graphic Designer",
-      "department": "Design",
-      "email": "michael.johnson@example.com",
-      "phone": "333-444-5555"
+      "isUpcoming": true,
+      "soldCount": 12,
+      "rating": {
+        "rate": 3.5,
+        "count": 30
+      },
+      "image_url": "/coming_soon.png"
     }
   ]
+  
+  
 }
