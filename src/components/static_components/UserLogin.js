@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Address from './Address';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
 export default function UserLogin() {
+
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -35,21 +41,33 @@ export default function UserLogin() {
                 />
               </div>
               <div className="mb-4">
-                <input
-                  type="password"
-                  name="password"
-                  className="form-control"
-                  placeholder="Password"
-                />
+                <div className="input-group password_toogle">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    className="form-control"
+                    placeholder="Password"
+                  />
+                  <button
+                    type="button"
+                    className="btn btn-info bg-blue"
+                    onClick={togglePasswordVisibility}
+                  >
+                    {showPassword ? (
+                      <i className="fa-regular fa-eye-slash toogle_icon"></i>
+                    ) : (
+                      <i className="fa-regular fa-eye toogle_icon"></i>
+                    )}
+                  </button>
+                </div>
               </div>
               <div className='row justify-content-center'>
                 <button type="submit" className="col-lg-6 btn btn-info p-2 login_button">Login</button>
               </div>
               <div className='row d-flex justify-content-center mt-4'>
-                <div className='col-lg-4'>
+                <div className='col-lg-5'>
                 <Link className='login_page_link' to="/coming_soon">Forget Password</Link>
                 </div>
-                <div className='col-lg-4'>
+                <div className='col-lg-5'>
                 <Link className='login_page_link' to="/coming_soon">Create New Account</Link>
                 </div>
               

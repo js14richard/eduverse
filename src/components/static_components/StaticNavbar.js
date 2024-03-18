@@ -7,7 +7,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-sm bg-blue navbar-dark">
         <div className="container">
           <div className='d-flex justify-content-between align-items-center w-100'>
-            <NavLink className="navbar-brand" to="/" activeClassName='active'>
+            <NavLink className="navbar-brand" to="/" activeclassname='active'>
               <img src="/logo.png" className="rounded-pill nav_logo" alt='' />
               <h3 className='d-inline-block logo_text mt-1'>EduVerse</h3>
             </NavLink>
@@ -18,19 +18,19 @@ export default function Navbar() {
           <div className="collapse navbar-collapse text-center" id="main_navbar">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink className='nav-link navigation_links' to="" activeClassName='active'>Home</NavLink>
+                <NavLink className='nav-link navigation_links' to="" activeclassname='active'>Home</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className='nav-link navigation_links' to="about_us" activeClassName='active'>About</NavLink>
+                <NavLink className='nav-link navigation_links' to="about_us" activeclassname='active'>About</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className='nav-link navigation_links' to="contact" activeClassName='active'>Contact</NavLink>
+                <NavLink className='nav-link navigation_links' to="contact" activeclassname='active'>Contact</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className='nav-link navigation_links' to="user_registration" activeClassName='active'>Register</NavLink>
+                <NavLink className='nav-link navigation_links' to="user_registration" activeclassname='active'>Register</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className='nav-link navigation_links' to="user_login" activeClassName='active'>Login</NavLink>
+                <NavLink className='nav-link navigation_links' to="user_login" activeclassname='active'>Login</NavLink>
               </li>
             </ul>
           </div>

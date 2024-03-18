@@ -1,130 +1,137 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "username": "Test user 1",
-        "password": "hashed_password_1",
-        "email": "user1@example.com",
-        "phone": "123-456-7890",
-        "purchasedCourses": [1, 3]
-      },
-      {
-        "id": 2,
-        "username": "Test user 2",
-        "password": "hashed_password_2",
-        "email": "user2@example.com",
-        "phone": "456-789-0123",
-        "purchasedCourses": [2, 4, 6]
-      },
-      {
-        "id": 3,
-        "username": "admin",
-        "password": "hashed_admin_password",
-        "email": "admin@example.com",
-        "phone": "789-012-3456",
-        "isAdmin": true
-      }
-    ],
-    "courses": [
-      {
-        "id": 1,
-        "title": "Introduction to Software Development",
-        "description": "Learn the basics of software development.",
-        "category": "Software Development",
-        "price": 29.99,
-        "isUpcoming": false,
-        "soldCount": 15
-      },
-      {
-        "id": 2,
-        "title": "Digital Marketing Fundamentals",
-        "description": "Master the essentials of digital marketing strategies.",
-        "category": "Digital Marketing",
-        "price": 24.99,
-        "isUpcoming": false,
-        "soldCount": 22
-      },
-      {
-        "id": 3,
-        "title": "Graphic Design Essentials",
-        "description": "Explore the fundamental principles of graphic design.",
-        "category": "Graphic Designing",
-        "price": 34.99,
-        "isUpcoming": false,
-        "soldCount": 18
-      },
-      {
-        "id": 4,
-        "title": "Effective Communication Skills",
-        "description": "Enhance your soft skills for professional success.",
-        "category": "Soft Skills",
-        "price": 19.99,
-        "isUpcoming": false,
-        "soldCount": 25
-      },
-      {
-        "id": 5,
-        "title": "Advanced Web Development",
-        "description": "Take your web development skills to the next level.",
-        "category": "Software Development",
-        "price": 39.99,
-        "isUpcoming": true,
-        "soldCount": 5
-      },
-      {
-        "id": 6,
-        "title": "Social Media Marketing Strategies",
-        "description": "Learn effective strategies for social media marketing.",
-        "category": "Digital Marketing",
-        "price": 29.99,
-        "isUpcoming": false,
-        "soldCount": 12
-      }
-    ],
-    "feedbacks": [
-      {
-        "id": 1,
-        "username": "user123",
-        "rating": 4,
-        "comment": "Great course, highly recommended!"
-      },
-      {
-        "id": 2,
-        "username": "user456",
-        "rating": 5,
-        "comment": "Excellent content and instructors."
-      },
-      {
-        "id": 3,
-        "username": "user789",
-        "rating": 3,
-        "comment": "Good course, but could use more practice exercises."
-      }
-    ],
-    "employees": [
-      {
-        "id": 1,
-        "name": "John Doe",
-        "position": "Software Engineer",
-        "department": "Engineering",
-        "email": "john.doe@example.com",
-        "phone": "111-222-3333"
-      },
-      {
-        "id": 2,
-        "name": "Jane Smith",
-        "position": "Marketing Manager",
-        "department": "Marketing",
-        "email": "jane.smith@example.com",
-        "phone": "222-333-4444"
-      },
-      {
-        "id": 3,
-        "name": "Michael Johnson",
-        "position": "Graphic Designer",
-        "department": "Design",
-        "email": "michael.johnson@example.com",
-        "phone": "333-444-5555"
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": "1",
+      "username": "Test user 1",
+      "password": "hashed_password_1",
+      "email": "user1@example.com",
+      "phone": "123-456-7890",
+      "purchasedCourses": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "2",
+      "username": "Test user 2",
+      "password": "hashed_password_2",
+      "email": "user2@example.com",
+      "phone": "456-789-0123",
+      "purchasedCourses": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "id": "3",
+      "username": "admin",
+      "password": "hashed_admin_password",
+      "email": "admin@example.com",
+      "phone": "789-012-3456",
+      "isAdmin": true
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "title": "Introduction to Software Development",
+      "description": "Learn the basics of software development.",
+      "category": "Software Development",
+      "price": 29.99,
+      "isUpcoming": false,
+      "soldCount": 15
+    },
+    {
+      "id": "2",
+      "title": "Digital Marketing Fundamentals",
+      "description": "Master the essentials of digital marketing strategies.",
+      "category": "Digital Marketing",
+      "price": 24.99,
+      "isUpcoming": false,
+      "soldCount": 22
+    },
+    {
+      "id": "3",
+      "title": "Graphic Design Essentials",
+      "description": "Explore the fundamental principles of graphic design.",
+      "category": "Graphic Designing",
+      "price": 34.99,
+      "isUpcoming": false,
+      "soldCount": 18
+    },
+    {
+      "id": "4",
+      "title": "Effective Communication Skills",
+      "description": "Enhance your soft skills for professional success.",
+      "category": "Soft Skills",
+      "price": 19.99,
+      "isUpcoming": false,
+      "soldCount": 25
+    },
+    {
+      "id": "5",
+      "title": "Advanced Web Development",
+      "description": "Take your web development skills to the next level.",
+      "category": "Software Development",
+      "price": 39.99,
+      "isUpcoming": true,
+      "soldCount": 5
+    },
+    {
+      "id": "6",
+      "title": "Social Media Marketing Strategies",
+      "description": "Learn effective strategies for social media marketing.",
+      "category": "Digital Marketing",
+      "price": 29.99,
+      "isUpcoming": false,
+      "soldCount": 12
+    }
+  ],
+  "feedbacks": [
+    {
+      "id": "1",
+      "username": "user123",
+      "rating": 4,
+      "comment": "Great course, highly recommended!"
+    },
+    {
+      "id": "2",
+      "username": "user456",
+      "rating": 5,
+      "comment": "Excellent content and instructors."
+    },
+    {
+      "id": "3",
+      "username": "user789",
+      "rating": 3,
+      "comment": "Good course, but could use more practice exercises."
+    }
+  ],
+  "employees": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "position": "Software Engineer",
+      "department": "Engineering",
+      "email": "john.doe@example.com",
+      "phone": "111-222-3333"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "position": "Marketing Manager",
+      "department": "Marketing",
+      "email": "jane.smith@example.com",
+      "phone": "222-333-4444"
+    },
+    {
+      "id": "3",
+      "name": "Michael Johnson",
+      "position": "Graphic Designer",
+      "department": "Design",
+      "email": "michael.johnson@example.com",
+      "phone": "333-444-5555"
+    }
+  ]
+}

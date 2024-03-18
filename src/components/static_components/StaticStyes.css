@@ -234,12 +234,31 @@ i:hover{
   height: inherit;
 }
 
+/* Registration Page Styling */
 
-/* Contact Page Styling */
 
 .register_image{
   height: 400px;
 }
+
+.password_toogle button{
+  border:.5px solid rgb(194, 194, 194);
+  border-left: none;
+  border-radius: 25px;
+}
+
+.password_toogle .btn{
+  border:none;
+}
+
+.toogle_icon{
+  font-size: 20px;
+}
+
+.toogle_icon:hover{
+  color:white;
+}
+
 
 /* Login page Styling */
 
