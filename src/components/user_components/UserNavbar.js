@@ -61,7 +61,7 @@ export default function UserNavbar() {
                 <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown" id="profileDropdownMenu">
                   <li className="dropdown-item">Hi {userName}</li>
                   <li><NavLink className='dropdown-item' to="coming_soon">Change Password</NavLink></li>
-                  <li><button className='dropdown-item' to="logout" onClick={handleLogout}>Logout</button></li>
+                  <li><NavLink className='dropdown-item' to="/" onClick={handleLogout}>Logout</NavLink></li>
                 </ul>
               </li>
             </ul>

@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import Address from './Address';
 import Footer from './Footer';
 import {loginUser} from '../../redux/actions/loginAction'
+import { Navigate, useNavigate } from 'react-router-dom';
+
 
 export default function UserLogin() {
   const { register, handleSubmit, formState: { errors }, reset  } = useForm();
@@ -16,10 +18,14 @@ export default function UserLogin() {
     setShowPassword(!showPassword);
   };
 
+  const navigate = useNavigate();
+
+
   const onSubmit = (data) => {
     console.log('Form data:', data);
     dispatch(loginUser(data));
     reset();
+    navigate('/courses_listing');
   };
 
   return (
