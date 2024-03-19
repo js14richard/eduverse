@@ -1,43 +1,30 @@
 {
   "users": [
     {
-      "id": "1",
-      "username": "Test user 1",
-      "password": "hashed_password_1",
-      "email": "user1@example.com",
-      "phone": "123-456-7890",
-      "purchasedCourses": [
-        1,
-        3
-      ]
-    },
-    {
-      "id": "2",
-      "username": "Test user 2",
-      "password": "hashed_password_2",
-      "email": "user2@example.com",
-      "phone": "456-789-0123",
-      "purchasedCourses": [
-        2,
-        4,
-        6
-      ]
-    },
-    {
       "id": "3",
-      "username": "admin",
+      "name": "admin",
       "password": "hashed_admin_password",
       "email": "admin@example.com",
       "phone": "789-012-3456",
       "isAdmin": true
     },
     {
-      "id": "8bc6",
+      "id": "00c8",
+      "name": "srichard-dbx",
+      "email": "demo1@gmail.com",
+      "skills": "",
+      "role": "",
+      "experience": "",
+      "phone": "954464654"
+    },
+    {
+      "id": "2b8f",
       "name": "SlackBot Test",
-      "email": "asdfasdf@asdf.ds",
-      "password": "RichiTech@123442",
-      "phone_number": "79797998777",
-      "additional_field": []
+      "email": "js5@yahoo.com",
+      "skills": "",
+      "role": "MEAN Stack  Developer",
+      "experience": "",
+      "phone": "954464654"
     }
   ],
   "courses": [
@@ -92,7 +79,7 @@
       "isUpcoming": true,
       "soldCount": 5,
       "rating": {
-        "rate": 4.0,
+        "rate": 4,
         "count": 50
       },
       "image_url": "/python.png"
@@ -176,7 +163,7 @@
       "isUpcoming": true,
       "soldCount": 2,
       "rating": {
-        "rate": 4.0,
+        "rate": 4,
         "count": 15
       },
       "image_url": "/coming_soon.png"
@@ -209,7 +196,6 @@
       },
       "image_url": "/coming_soon.png"
     }
-  ]
-  
-  
+  ],
+  "employee": []
 }

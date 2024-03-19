@@ -325,6 +325,9 @@ i:hover{
   margin-top: 100px;
 }
 
+.filter_section{
+  height: 360px;
+}
 
 .description {
   overflow: hidden;
@@ -348,6 +351,11 @@ i:hover{
   height: 150px;
 }
 
+.course_card_image2 {
+  object-fit: cover;
+  height: 250px;
+}
+
 .course_display{
   margin-top: 100px;
 }
@@ -355,4 +363,10 @@ i:hover{
 .course_detail_image{
   height: 350px;
   object-fit: contain;
+}
+
+/* Purchased courses section */
+
+.purchased_courses_section{
+  margin-top:130px;
 }

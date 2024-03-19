@@ -1,19 +1,29 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { log_out_user } from '../../redux/actions/loginAction';
 
-export default function Navbar() {
-  // Assume you have access to the user's name
-  const [userName, setUserName] = useState("John"); // Example user name
 
+export default function UserNavbar() {
+    const userName = useSelector((state) => state.auth.user.username);
+    console.log(userName)
   const toggleDropdown = () => {
     const dropdownMenu = document.getElementById('profileDropdownMenu');
     dropdownMenu.classList.toggle('show');
   };
 
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.auth);
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    dispatch(log_out_user());
+  };
+
   return (
     <div className='fixed-top text-center'>
       <nav className="navbar navbar-expand-sm bg-blue navbar-dark">
-        <div className="container">
+        <div className="container"> 
           <div className='d-flex justify-content-between align-items-center w-100'>
             <NavLink className="navbar-brand" to="/" activeclassname='active'>
               <img src="/logo.png" className="rounded-pill nav_logo" alt='' />
@@ -35,7 +45,10 @@ export default function Navbar() {
                 <NavLink className='nav-link navigation_links' to="cart" activeclassname='active'>Cart</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className='nav-link navigation_links' to="profile" activeclassname='active'>Dashboard</NavLink>
+                <NavLink className='nav-link navigation_links' to="purchased_courses" activeclassname='active'>Learning</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className='nav-link navigation_links' to="employees" activeclassname='active'>Users</NavLink>
               </li>
             </ul>
             <ul className="navbar-nav ml-auto">
@@ -46,7 +59,7 @@ export default function Navbar() {
                 <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown" id="profileDropdownMenu">
                   <li className="dropdown-item">Hi {userName}</li>
                   <li><NavLink className='dropdown-item' to="coming_soon">Change Password</NavLink></li>
-                  <li><NavLink className='dropdown-item' to="logout">Logout</NavLink></li>
+                  <li><button className='dropdown-item' to="logout" onClick={handleLogout}>Logout</button></li>
                 </ul>
               </li>
             </ul>

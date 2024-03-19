@@ -35,7 +35,6 @@ export default function UserRegistration() {
     <div>
       <div className="container pt-5 mt-5">
         <h2 className="mb-4 text-center">User Registration</h2>
-        
         {/* Bootstrap danger alert */}
         {registrationError && (
                 <div className="alert alert-danger mt-3" role="alert">
@@ -104,17 +103,22 @@ export default function UserRegistration() {
               <div>
                 <input
                   type="text"
-                  {...register('phone_number', { required: true })}
+                  {...register('phone', { required: true })}
                   className="form-control"
                   placeholder="Phone Number"
                 />
-                {errors.phone_number && <span className="text-danger">Phone number is required</span>}
+                {errors.phone && <span className="text-danger">Phone number is required</span>}
               </div>
 
               {/* Hidden input field */}
               <input
                 type="hidden"
-                {...register('additional_field', { value: [] })}
+                {...register('purchasedCourses', { value: [] })}
+              />
+
+              <input
+                type="hidden"
+                {...register('cartItems', { value: [] })}
               />
               
               <button type="submit" className="btn btn-info mt-4 col-lg-12">Sign Up</button>

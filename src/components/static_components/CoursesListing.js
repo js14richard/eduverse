@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import { fetchCourses } from '../../redux/actions/courseActions';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
+import { addToCart } from '../../redux/actions/cartAction'; // Import addToCart action creator
 
 const CoursesListing = ({ fetchCourses, courses }) => {
   useEffect(() => {
@@ -13,6 +14,18 @@ const CoursesListing = ({ fetchCourses, courses }) => {
   const [ratingFilter, setRatingFilter] = useState('');
   const [showUpcoming, setShowUpcoming] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+
+  const user = useSelector(state => state.auth.user); 
+  const dispatch = useDispatch();
+
+
+  const handleAddToCart = (courseId) => {
+    if (!user) {
+      alert('Please log in to add courses to your cart.');
+      return;
+    }
+    dispatch(addToCart(user.id, courseId));
+  };
 
   const CourseCard = ({ course }) => {
     return (
@@ -28,7 +41,7 @@ const CoursesListing = ({ fetchCourses, courses }) => {
               {course.isUpcoming ? (
                 <button className='btn btn-danger' disabled>Upcoming</button>
               ) : (
-                <Link to={`/cart/${course.id}`} className='btn btn-success'>Add to cart</Link>
+                <button onClick={() => handleAddToCart(course.id)} className='btn btn-success'>Add to cart</button> 
               )}
               &nbsp;&nbsp;&nbsp;
               <Link to={`course_info/${course.id}`} className='btn btn-warning ml-2'>More details</Link>

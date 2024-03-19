@@ -1,13 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
+import { addToCart } from '../../redux/actions/cartAction';
 
 export default function CourseInfo() {
   const { course_id } = useParams();
   const [courseData, setCourseData] = useState(null);
 
   useEffect(() => {
-    // Fetch course data from the API endpoint
     axios.get(`http://localhost:3001/courses/${course_id}`)
       .then(response => {
         setCourseData(response.data);
@@ -17,7 +18,16 @@ export default function CourseInfo() {
       });
   }, [course_id]);
 
+  const user = useSelector(state => state.auth.user); 
+  const dispatch = useDispatch();
 
+  const handleAddToCart = (courseId) => {
+    if (!user) {
+      alert('Please log in to add courses to your cart.');
+      return;
+    }
+    dispatch(addToCart(user.id, courseId));
+  };
 
   if (!courseData) {
     return <div>Loading...</div>;
@@ -39,7 +49,7 @@ export default function CourseInfo() {
               {courseData.isUpcoming ? (
                 <button className='btn btn-success' disabled>Upcoming Course</button>
               ) : (
-                <button className='btn btn-success'>Add to cart</button>
+                <button className='btn btn-success' onClick={() => handleAddToCart(courseData.id)} >Add to cart</button>
               )}
               &nbsp;&nbsp;&nbsp;
               <Link to='/courses_listing' className='btn btn-danger'>Back to Courses</Link>
