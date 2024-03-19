@@ -110,7 +110,6 @@ export default function Users() {
                             <th scope='col'>Name</th>
                             <th scope='col'>Email</th>
                             <th scope='col'>Phone</th>
-                            <th scope='col'>Purchased Courses</th>
                             <th scope='col'>Action</th>
                         </tr>
                     </thead>
@@ -120,7 +119,6 @@ export default function Users() {
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>{user.phone}</td>
-                                <td>{user.purchaseCourses}</td>
                                 <td>
                                     <button className='btn btn-warning m-1' data-bs-toggle="modal" data-bs-target="#update_user_modal" onClick={() => handleEdit(user)}>Edit</button>
                                     <button className='btn btn-danger m-1' onClick={() => deleteUser(user.id)}>Delete</button>

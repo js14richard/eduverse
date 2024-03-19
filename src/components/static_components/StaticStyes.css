@@ -328,6 +328,10 @@ i:hover{
 .filter_section{
   height: 360px;
 }
+.search_icon{
+  font-size: 20px;
+  color: #07407b;
+}
 
 .description {
   overflow: hidden;

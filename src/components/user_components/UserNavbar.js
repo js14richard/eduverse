@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { log_out_user } from '../../redux/actions/loginAction';
 
-
 export default function UserNavbar() {
-    
   const toggleDropdown = () => {
     const dropdownMenu = document.getElementById('profileDropdownMenu');
     dropdownMenu.classList.toggle('show');
@@ -13,9 +11,8 @@ export default function UserNavbar() {
 
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
-
   const userName = useSelector((state) => state.auth.user.name);
-    console.log(userName)
+  const profilePicture = '/profile1.jpeg';
 
   const handleLogout = () => {
     localStorage.removeItem('user');
@@ -27,7 +24,7 @@ export default function UserNavbar() {
       <nav className="navbar navbar-expand-sm bg-blue navbar-dark">
         <div className="container"> 
           <div className='d-flex justify-content-between align-items-center w-100'>
-            <NavLink className="navbar-brand" to="/" activeclassname='active'>
+            <NavLink className="navbar-brand" to="/" activeClassName='active'>
               <img src="/logo.png" className="rounded-pill nav_logo" alt='' />
               <h3 className='d-inline-block logo_text mt-1'>EduVerse</h3>
             </NavLink>
@@ -38,25 +35,25 @@ export default function UserNavbar() {
           <div className="collapse navbar-collapse text-center" id="main_navbar">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink className='nav-link navigation_links' to="/" activeclassname='active'>Home</NavLink>
+                <NavLink className='nav-link navigation_links' to="/" activeClassName='active'>Home</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className='nav-link navigation_links' to="courses_listing" activeclassname='active'>Courses</NavLink>
+                <NavLink className='nav-link navigation_links' to="courses_listing" activeClassName='active'>Courses</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className='nav-link navigation_links' to="cart" activeclassname='active'>Cart</NavLink>
+                <NavLink className='nav-link navigation_links' to="cart" activeClassName='active'>Cart</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className='nav-link navigation_links' to="purchased_courses" activeclassname='active'>Learning</NavLink>
+                <NavLink className='nav-link navigation_links' to="purchased_courses" activeClassName='active'>Learning</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className='nav-link navigation_links' to="employees" activeclassname='active'>Users</NavLink>
+                <NavLink className='nav-link navigation_links' to="employees" activeClassName='active'>Users</NavLink>
               </li>
             </ul>
             <ul className="navbar-nav ml-auto">
               <li className="nav-item dropdown">
-                <div className="nav-link" id="profileDropdown" onClick={toggleDropdown}>
-                  <i className="fas fa-user-circle user_icon"></i>
+                <div className="nav-link navbar-brand" id="profileDropdown" onClick={toggleDropdown}>
+                  <img src={profilePicture} className=" rounded-pill nav_logo user_icon" alt='Profile' />
                 </div>
                 <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown" id="profileDropdownMenu">
                   <li className="dropdown-item">Hi {userName}</li>

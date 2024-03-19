@@ -69,13 +69,18 @@ const CoursesListing = ({ fetchCourses, courses }) => {
           <div className='filter_section card col-lg-3 col-md-6 mb-4'>
             <div className="mb-3 mt-4">
               <h5>Search Courses</h5>
-              <input
-                type="search"
-                className="form-control"
-                placeholder="Search by title or description"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
+              <div className="input-group">
+                <input
+                  type="search"
+                  className="form-control"
+                  placeholder="Search by title or description"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <span className="input-group-text">
+                  <i className="fa fa-search search_icon"></i>
+                </span>
+              </div>
             </div>
             <h5>Filter by Category</h5>
             <select className="form-select mb-3" value={filter} onChange={(e) => setFilter(e.target.value)}>
