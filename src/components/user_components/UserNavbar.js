@@ -5,8 +5,7 @@ import { log_out_user } from '../../redux/actions/loginAction';
 
 
 export default function UserNavbar() {
-    const userName = useSelector((state) => state.auth.user.username);
-    console.log(userName)
+    
   const toggleDropdown = () => {
     const dropdownMenu = document.getElementById('profileDropdownMenu');
     dropdownMenu.classList.toggle('show');
@@ -14,6 +13,9 @@ export default function UserNavbar() {
 
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
+
+  const userName = useSelector((state) => state.auth.user.name);
+    console.log(userName)
 
   const handleLogout = () => {
     localStorage.removeItem('user');

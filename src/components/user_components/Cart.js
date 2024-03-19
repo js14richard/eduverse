@@ -54,9 +54,9 @@ export default function Cart() {
     if (window.confirm('Are you sure you want to delete this item from the cart?')) {
       try {
         await axios.put(`http://localhost:3001/users/${userId}`, {
-          cartItems: cartItems.filter(id => id !== itemId) // Remove the item from cartItems array
+          cartItems: cartItems.filter(id => id !== itemId) 
         });
-        setCartItems(cartItems.filter(id => id !== itemId)); // Update local state
+        setCartItems(cartItems.filter(id => id !== itemId)); 
       } catch (error) {
         console.error('Error deleting item from cart:', error);
       }
@@ -67,7 +67,7 @@ export default function Cart() {
     if (window.confirm('Are you sure you want to clear the cart?')) {
       try {
         await axios.put(`http://localhost:3001/users/${userId}`, { cartItems: [] });
-        setCartItems([]); // Clear cartItems state
+        setCartItems([]); 
       } catch (error) {
         console.error('Error clearing cart:', error);
       }
@@ -79,11 +79,10 @@ export default function Cart() {
       try {
         const response = await axios.get(`http://localhost:3001/users/${userId}`);
         const userData = response.data;
-  
-        const updatedPurchasedCourses = [...userData.purchasedCourses, ...cartItems];
-        const uniquePurchasedCourses = [...new Set(updatedPurchasedCourses)];
+        
         await axios.put(`http://localhost:3001/users/${userId}`, {
-          purchasedCourses: uniquePurchasedCourses,
+          ...userData,
+          purchasedCourses: [...userData.purchasedCourses, ...userData.cartItems],
           cartItems: []
         });
         setCartItems([]);
@@ -92,6 +91,8 @@ export default function Cart() {
       }
     }
   };
+  
+  
   
 
   const getTotalPrice = () => {

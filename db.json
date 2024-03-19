@@ -9,13 +9,18 @@
       "isAdmin": true
     },
     {
+      "id": "42b2",
+      "name": "Siril Richard",
+      "email": "user1@example.com",
+      "password": "user1@example.comA",
+      "phone": "23424",
       "purchasedCourses": [
         "2",
-        "3",
-        "11"
+        "3"
       ],
-      "cartItems": [],
-      "id": "42b2"
+      "cartItems": [
+        "7"
+      ]
     }
   ],
   "courses": [
