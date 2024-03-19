@@ -9,22 +9,13 @@
       "isAdmin": true
     },
     {
-      "id": "00c8",
-      "name": "srichard-dbx",
-      "email": "demo1@gmail.com",
-      "skills": "",
-      "role": "",
-      "experience": "",
-      "phone": "954464654"
-    },
-    {
-      "id": "2b8f",
-      "name": "SlackBot Test",
-      "email": "js5@yahoo.com",
-      "skills": "",
-      "role": "MEAN Stack  Developer",
-      "experience": "",
-      "phone": "954464654"
+      "purchasedCourses": [
+        "2",
+        "3",
+        "11"
+      ],
+      "cartItems": [],
+      "id": "42b2"
     }
   ],
   "courses": [
