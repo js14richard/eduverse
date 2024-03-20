@@ -3,7 +3,7 @@ import { connect, useDispatch, useSelector } from 'react-redux';
 import { fetchCourses } from '../../redux/actions/courseActions';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
-import { addToCart } from '../../redux/actions/cartAction'; // Import addToCart action creator
+import { addToCart } from '../../redux/actions/cartAction';
 
 const CoursesListing = ({ fetchCourses, courses }) => {
   useEffect(() => {
@@ -62,6 +62,13 @@ const CoursesListing = ({ fetchCourses, courses }) => {
     return categoryMatch && ratingMatch && upcomingMatch && searchMatch;
   });
 
+  const handleResetFilters = () => {
+    setFilter('All');
+    setRatingFilter('');
+    setShowUpcoming(false);
+    setSearchQuery('');
+  };
+
   return (
     <div>
       <div className='container course_listing_page_wrapper'>
@@ -110,6 +117,9 @@ const CoursesListing = ({ fetchCourses, courses }) => {
                 Show Upcoming Courses
               </label>
             </div>
+            
+            <button className="btn btn-danger mt-3" onClick={handleResetFilters}>Reset Filters</button>
+            
           </div>
           <div className='course_listing_container col-lg-9'>
             <div className='row'>
