@@ -19,6 +19,20 @@
         "3"
       ],
       "cartItems": [
+        "7",
+        "2"
+      ]
+    },
+    {
+      "id": "d136",
+      "name": "Richard Siril",
+      "email": "livedemo@gmail.com",
+      "password": "livedemo@gmail.comA1",
+      "phone": "1234567890",
+      "purchasedCourses": [],
+      "cartItems": [
+        "1",
+        "11",
         "7"
       ]
     }

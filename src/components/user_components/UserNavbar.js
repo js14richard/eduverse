@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { log_out_user } from '../../redux/actions/loginAction';
+import axios from 'axios';
 
 export default function UserNavbar() {
   const toggleDropdown = () => {
     const dropdownMenu = document.getElementById('profileDropdownMenu');
     dropdownMenu.classList.toggle('show');
   };
+
 
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
@@ -18,6 +20,8 @@ export default function UserNavbar() {
     localStorage.removeItem('user');
     dispatch(log_out_user());
   };
+
+
 
   return (
     <div className='fixed-top text-center'>

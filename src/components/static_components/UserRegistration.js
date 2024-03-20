@@ -103,11 +103,12 @@ export default function UserRegistration() {
               <div>
                 <input
                   type="text"
-                  {...register('phone', { required: true })}
+                  {...register('phone', { required: true, minLength: 10  })}
                   className="form-control"
                   placeholder="Phone Number"
                 />
                 {errors.phone && <span className="text-danger">Phone number is required</span>}
+                {errors.phone && errors.phone.type === 'minLength' && <span className="text-danger">Phone number must be at least 10 digits</span>}
               </div>
 
               {/* Hidden input field */}
